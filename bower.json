@@ -1,0 +1,25 @@
+{
+  "name": "react-express-full-stack",
+  "description": "A full stack react express app",
+  "main": "index.js",
+  "authors": [
+    "CharlieGarcia"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "express"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "react": "^15.1.0"
+  }
+}
