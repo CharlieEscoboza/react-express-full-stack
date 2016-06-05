@@ -2,7 +2,8 @@ const React = require('react');
 const ReactDOM = require('react-dom');
 
 // local components
-const GroceryItem = require('./GroceryItem.jsx')
+const GroceryItem = require('./GroceryItem.jsx');
+const GroceryListAddItem = require('./GroceryListAddItem.jsx');
 
 const GroceryItemList = React.createClass({
 
@@ -26,6 +27,7 @@ const GroceryItemList = React.createClass({
     return (
       <div>
         <h1>Grocery Listify</h1>
+        <GroceryListAddItem />
         { items }
       </div>
     );

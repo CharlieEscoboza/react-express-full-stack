@@ -2,3 +2,13 @@
   color: #999;
   text-decoration: line-through;
 }
+
+form {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.item {
+  display: inline-block;
+  width: 60%;
+}

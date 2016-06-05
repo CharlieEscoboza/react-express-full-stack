@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon ./server/main.js",
+    "dev": "gulp serve",
     "test": "test"
   },
   "repository": {

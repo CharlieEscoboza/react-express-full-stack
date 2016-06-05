@@ -10,6 +10,7 @@ app.get('/', (req, res) => {
 })
 
 app.use(express.static(__dirname + '/../.tmp'));
+app.use(express.static(__dirname + '/../bower_components'));
 
 app.listen(PORT, () => {
   console.log(`App is running at http://localhost:${PORT}`);
