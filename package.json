@@ -34,7 +34,7 @@
     "gulp": "^3.9.1",
     "gulp-live-server": "0.0.29",
     "jquery": "^2.2.4",
-    "mongoose": "^4.4.19",
+    "mongoose": "^4.4.20",
     "nodemon": "^1.9.2",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",

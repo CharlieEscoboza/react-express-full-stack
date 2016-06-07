@@ -4,6 +4,8 @@ const parser = require('body-parser');
 const app = new express();
 const PORT = 7777;
 
+require('./database.js');
+
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {

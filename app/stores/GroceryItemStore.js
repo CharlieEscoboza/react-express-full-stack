@@ -2,25 +2,8 @@ const dispatcher = require('../dispatcher.js');
 const helper = require('../helpers/RestHelper.js');
 
 const GroceryItemStore = function () {
-  // const items = [];
-  // const items = [
-  //   {
-  //     name: "Ice Cream"
-  //   },
-  //   {
-  //     name: "Waffles"
-  //   },
-  //   {
-  //     name: "Candy",
-  //     purchased: true
-  //   },
-  //   {
-  //     name: "Snarks"
-  //   }
-  // ];
 
   let items = [];
-
 
   console.log(helper.get('/api/items'));
   helper.get('/api/items')
