@@ -5,7 +5,6 @@ const GroceryItemStore = function () {
 
   let items = [];
 
-  console.log(helper.get('/api/items'));
   helper.get('/api/items')
         .then((data) => {
           items = data;
@@ -24,10 +23,18 @@ const GroceryItemStore = function () {
   }
 
   function deleteGroceryItem (item) {
-    let  index = items.indexOf(item);
-    items.splice(index, 1);
-    console.log('deleted');
+    const itemName = item.name && item.name.name;
+    var _index;
+    const itemToDelete = items.forEach((item, index) => {
+      if (itemName === item.name) {
+        _index = index;
+        return false;
+      }
+    });
+    items.splice(_index, 1);
     triggerListeners();
+
+    helper.del('/api/items/' + item.name._id);
   }
 
   function onChange(listener) {
@@ -38,6 +45,7 @@ const GroceryItemStore = function () {
     let index = items.indexOf(item.name);
     items[index].purchased = isBought || false;
     triggerListeners();
+    helper.patch('/api/items/' + item.name._id, item);
   }
 
   function triggerListeners() {
@@ -53,6 +61,7 @@ const GroceryItemStore = function () {
         case 'add':
           addGroceryItem(evt.payload);
           break;
+
         case 'delete':
           deleteGroceryItem(evt.payload);
           break;
