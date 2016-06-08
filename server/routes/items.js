@@ -6,7 +6,7 @@ module.exports = function (app) {
   app.route('/api/items')
      .get((req, res) => {
        GroceryItem.find((error, doc) => {
-         items = doc;
+         let items = doc;
          res.send(items);
        });
      })
